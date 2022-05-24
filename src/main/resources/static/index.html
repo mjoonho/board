@@ -232,6 +232,9 @@
         // 메모를 삭제합니다.
 
         function deleteOne(id) {
+            if (test(id) == false) {
+                window.location.reload();
+            }
             $.ajax({
                 type: "DELETE",
                 url: `/api/boards/${id}`,
