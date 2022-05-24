@@ -7,7 +7,8 @@ import org.apache.logging.log4j.util.Strings;
 public class BoardRequestDto {
     private String username;
     private String contents;
-    private  String title;
-    private String name;
+    private String title;
+    private String myname;
+    private String pw;
 
 }

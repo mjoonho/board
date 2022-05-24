@@ -24,7 +24,7 @@ public class BoardController {
     }
 
     @GetMapping("/api/boards")
-    public List<Board> getBoard() {
+    public List<Board> getBoards() {
         return boardRepository.findAllByOrderByModifiedAtDesc();
     }
 

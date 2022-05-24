@@ -23,26 +23,32 @@ public class Board extends Timestamped { // 생성,수정 시간을 자동으로
     private String title;
 
     @Column(nullable = false)
-    private String name;
+    private String myname;
 
-    public Board(String username, String contents, String title, String name) {
+    @Column(nullable = false)
+    private String pw;
+
+    public Board(String username, String contents, String title, String myname , String pw) {
         this.username = username;
         this.contents = contents;
         this.title= title;
-        this.name= name;
+        this.myname= myname;
+        this.pw = pw;
     }
 
     public Board(BoardRequestDto requestDto) {
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();
         this.title = requestDto.getTitle();
-        this.name = requestDto.getName();
+        this.myname = requestDto.getMyname();
+        this.pw = requestDto.getPw();
     }
 
     public void update(BoardRequestDto requestDto) {
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();
         this.title = requestDto.getTitle();
-        this.name = requestDto.getName();
+        this.myname = requestDto.getMyname();
+        this.pw = requestDto.getPw();
     }
 }
