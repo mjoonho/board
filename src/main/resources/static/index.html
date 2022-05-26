@@ -58,65 +58,66 @@
         function addHTML(id, username, contents, modifiedAt, myname, title, pw) {
             // 1. HTML 태그를 만듭니다.
             let tempHtml = `<div class="card">
-        <!-- date/username 영역 -->
-        <div class="metadata">
-            <div class="date">
-            <div id="${id}-modifiedAt" class="modifiedAt">
-                ${modifiedAt}
-            </div>
-            </div>
-            <div id="${id}-username" class="username">
-                ${username}
-            </div>
-        </div>
-        <!-- contents 조회/수정 영역-->
-        <div class="myname">
-            <div id="${id}-myname" class="text">
-                ${myname}
-            </div>
-            <div id="${id}-editarea1" class="edit1">
-                <textarea id="${id}-textarea1" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
-            </div>
-        </div>
+                                <!-- date/username 영역 -->
+                                    <div class="modifiedAt">
+                                    <div id="${id}-modifiedAt" class="text">
+                                        ${modifiedAt}
+                                    </div>
+                                    </div>
+                                    <div class="username">
+                                    <div id="${id}-username" class="text">
+                                        ${username}
+                                    </div>
+                                    </div>
 
-        <div class="title">
-            <div id="${id}-title" class="text">
-                ${title}
-            </div>
-            <div id="${id}-editarea2" class="edit2">
-                <textarea id="${id}-textarea2" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
-            </div>
-        </div>
+                                <!-- contents 조회/수정 영역-->
+                                <div class="myname">
+                                    <div id="${id}-myname" class="text">
+                                        ${myname}
+                                    </div>
+                                    <div id="${id}-editarea1" class="edit1">
+                                        <textarea id="${id}-textarea1" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
+                                    </div>
+                                </div>
 
-        <div class="pw">
-            <div id="${id}-pw" class="text">
-                ${pw}
-            </div>
-            <div id="${id}-editarea3" class="edit3">
-                <textarea id="${id}-textarea3" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
-            </div>
-            <div id="${id}-editarea3" class="edit5">
-                <input id="${id}-textarea5" class="te-edit" name="" id="" cols="30" rows="5"></input>
-            </div>
-        </div>
+                                <div class="title">
+                                    <div id="${id}-title" class="text">
+                                        ${title}
+                                    </div>
+                                    <div id="${id}-editarea2" class="edit2">
+                                        <textarea id="${id}-textarea2" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
+                                    </div>
+                                </div>
 
-        <div class="contents">
-            <div id="${id}-contents" class="text">
-                ${contents}
-            </div>
-            <div id="${id}-editarea4" class="edit4">
-                <textarea id="${id}-textarea4" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
-            </div>
-        </div>
+                                <div class="pw">
+                                    <div id="${id}-pw" class="text">
+                                        ${pw}
+                                    </div>
+                                    <div id="${id}-editarea3" class="edit3">
+                                        <textarea id="${id}-textarea3" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
+                                    </div>
+                                    <div id="${id}-editarea3" class="edit5">
+                                        <input id="${id}-textarea5" class="te-edit" name="" id="" cols="30" rows="5"></input>
+                                    </div>
+                                </div>
+
+                                <div class="contents">
+                                    <div id="${id}-contents" class="text">
+                                        ${contents}
+                                    </div>
+                                    <div id="${id}-editarea4" class="edit4">
+                                        <textarea id="${id}-textarea4" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
+                                    </div>
+                                </div>
 
 
-        <!-- 버튼 영역-->
-        <div class="footer">
-            <img id="${id}-edit" class="icon-start-edit" src="images/edit.png" alt="" onclick="editPost('${id}')">
-            <img id="${id}-delete" class="icon-delete" src="images/delete.png" alt="" onclick="deleteOne('${id}')">
-            <img id="${id}-submit" class="icon-end-edit" src="images/done.png" alt="" onclick="submitEdit('${id}')">
-        </div>
-    </div>`;
+                                <!-- 버튼 영역-->
+                                <div class="footer">
+                                    <img id="${id}-edit" class="icon-start-edit" src="images/edit.png" alt="" onclick="editPost('${id}')">
+                                    <img id="${id}-delete" class="icon-delete" src="images/delete.png" alt="" onclick="deleteOne('${id}')">
+                                    <img id="${id}-submit" class="icon-end-edit" src="images/done.png" alt="" onclick="submitEdit('${id}')">
+                                </div>
+                            </div>`;
             // 2. #cards-box 에 HTML을 붙인다.
             $('#cards-box').append(tempHtml);
         }
